@@ -72,7 +72,148 @@ Q12 - Explain how JSON can be manipulated in JavaScript, using examples from the
 
 **Answer:** 
 
-Q13 - For the code snippet provided below, write comments for each line of code to explain its functionality. In your comments you must demonstrates your ability to recognise and identify functions, ranges and classes
+There are two main functions available in Javascript to manipulate JSON. They are parse and stringify.
+
+Parse converts JSON to Javascript Object. Stringfy converts Object to a JSON string. 
+
+The following code samples are examples of JSON manipution using javascript.
+
+1. Parsing JSON
+
+   In the following example, a json string in parsed to a javascript object and the properties of the object are printed on the console. 
+
+```javascript
+/**
+ * Parsing JSON
+ */
+
+// city data in json format
+let city = '{"name": "Sydney", "state": "NSW", "postcode": 2000}';
+
+// converting city to a javascript object
+let cityObj = JSON.parse(city);
+
+// accessing properties of the json object
+console.log(cityObj.name); 
+console.log(cityObj.state); 
+console.log(cityObj.postcode); 
+
+/**
+ * ------------
+ * Output
+ * ------------
+ * Sydney
+ * NSW
+ * 2000
+ */
+
+
+```
+
+
+
+2. Parsing complex JSON
+
+   In the following example, JSON string is complex with arrays, and inner json objects. Javascript can handle these complexities easily as shown in the example below.
+
+```javascript
+/* Complex JSON Object */
+let city_suburbs = `{
+    "Sydney": {
+        "suburbs": ["Newtown", "Bondi", "North Sydney"],
+        "postcode": {
+            "Newtown": "2045", "Bondi": "2010", "North Sydney": "2060"
+        }
+    }
+}`;
+
+// parse json object
+citySuburbObj = JSON.parse(city_suburbs);
+
+// print properties
+function print(complexObj) {
+    for(let i in complexObj) {
+        if(complexObj[i] instanceof Object) {
+            //console.log("Type of Object", typeof complexObj[i]);
+            print(complexObj[i]);
+        } else {
+            console.log(complexObj[i]);
+        };
+    }
+};
+
+// print all values from city suburb Object
+print(citySuburbObj);
+
+/**
+ * -----------
+ * Output
+ * -----------
+ * Newtown
+ * Bondi
+ * North Sydney
+ * 2045
+ * 2010
+ * 2060
+ * 
+ */
+
+
+```
+
+
+
+3. Converting Javascript Object to JSON string
+
+   In the following example, a JSON object is converted to a String.
+
+```javascript
+// Data Encoding - Converting object to JSON String 
+
+// Object
+let suburbObj = {"name": "Newtown", "population": 25000, "postcode": "2045"};
+
+// Converting object to JSON string
+let json = JSON.stringify(suburbObj);
+console.log(json);
+
+/**
+ * ---------
+ * Output
+ * ---------
+ * {"name":"Newtown","population":25000,"postcode":"2045"}
+ */
+
+
+```
+
+
+
+4. Converting Array to JSON String
+
+In the following example, an array is converted to a JSON string.
+
+```javascript
+// Data Encoding - Converting array to JSON string
+
+// array
+let suburbArray = ["Sydney", "Newtown", "Pertersham", "Ashfield", "Burwood"];
+
+// Convert array to JSON string
+let jsonString = JSON.stringify(suburbArray);
+console.log(jsonString);
+
+/**
+ * -------------
+ * Output
+ * -------------
+ * ["Sydney","Newtown","Pertersham","Ashfield","Burwood"]
+ */
+```
+
+
+
+**Q13 - For the code snippet provided below, write comments for each line of code to explain its functionality. In your comments you must demonstrates your ability to recognise and identify functions, ranges and classes**
 
 ###### Answer: Code Snippet with comments
 
