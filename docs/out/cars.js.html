@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: cars.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: cars.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+  * A class (special function in JavaScript) representing a Car.
+  **/
+ class Car {
+    /**
+      * Creates a Car and initialises the carname with Brand name. 
+      * The value of this will be new Object when the Object of 
+      * type Car is created. It is a constructor function.
+      * @param {string} brand Brand of the Car
+      */
+    constructor(brand) {
+        // When the new Object is created, the property carname 
+        // will be assigned the brand name
+        this.carname = brand; 
+    }
+
+    /**
+      * A method (function in a class) to return the carname that the Object has been assigned.
+      * 
+      * @returns {string} A statement is returned with the value of Object's property carname 
+      */
+    present() {
+        //return concatenated string with carname
+        return 'I have a ' + this.carname; 
+    }
+}
+
+/**
+  * A class (special function) representing a Model of a Car and is properties 
+  * and methods are inherited from Car.
+  * @extends Car Inherited to take the properties of Car
+  */
+class Model extends Car {
+    /**
+      * Creates a Model, initialises the superclass with brand and initilises 
+      * the new property mod (Model of Car) It is a constructor function.
+      * @param {string} brand Brand of the car
+      * @param {string} mod Model of the car (Year)
+      */
+    constructor(brand, mod) {
+        // calls the parent's (Car class) constructor function to initialise and get access to properties
+        super(brand); 
+        // When the new Object is created, mod parameter is assigned to model property
+        this.model = mod; 
+    }
+    /**
+      * A method (function in a class) used to get the brand and the model
+      * @returns {string} A concatenated string with brand and model
+      */
+    show() {
+        // returns a concatenated value with a string value from 
+        // inherited method and model property value of the Object (Model)
+        return this.present() + ', it was made in ' + this.model;
+    }
+}
+    
+    // Array of car brands
+    // index range of 0 to 2 (length of array is 3)
+    let makes = ["Ford", "Holden", "Toyota"] 
+    
+    // Creates an array for 40 elements with each index
+    // assigned a value of 1980 + current index
+    // The array is initialized with undefined, 
+    // so the value of x will be undefined
+    // index range of 0 to 39 (length of array is 40)
+    let models = Array.from(new Array(40), (x,i) => i + 1980) 
+
+    /**
+      * 
+      * @param {number} min lowest possible value of the random number
+      * @param {number} max highest possible value of the random number
+      * 
+      * @returns {number} a random number greater than or equal to min and less than or equal to max 
+      */
+    function randomIntFromInterval(min,max) { // min and max included
+        // Math.random() returns a number less than zero
+        // Math.random() multiplied by a number will return a number greater 
+        // or less than zero and a floor on number rounds the number down
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+
+    // iterate each element in models array and print 
+    // car brand and models as a random combination
+    for (model of models) {
+
+        // selects an element(string make(brand)) in the makes array at a random index
+        // random index is determined by calling function randomIntFromInterval using
+        // the count of number of elements in the makes array
+        make = makes[randomIntFromInterval(0,makes.length-1)] 
+        // selects an element(string model) in the models array at a random index
+        // random index is determined by calling function randomIntFromInterval using
+        // the count of number of elements in the makes array
+        model = models[randomIntFromInterval(0,makes.length-1)] 
+
+        mycar = new Model(make, model); // Create a new Model object with make(brand) and model
+        console.log(mycar.show()) // Prints/Logs the car brand and model to console
+    }</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Car.html">Car</a></li><li><a href="Model.html">Model</a></li></ul><h3>Global</h3><ul><li><a href="global.html#randomIntFromInterval">randomIntFromInterval</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Fri Mar 06 2020 13:32:50 GMT+1100 (Australian Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
