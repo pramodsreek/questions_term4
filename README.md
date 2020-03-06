@@ -40,7 +40,27 @@ Q6 - With reference to one of your own projects, evaluate how effective your kno
 
 Q7 - Explain control flow, using an example from the JavaScript programming language
 
-Q8 - Explain type coercion, using examples from the JavaScript programming language
+**Q8 - Explain type coercion, using examples from the JavaScript programming language**
+
+**Answer:** Type coercion is the implicit conversion of data types. 
+
+Examples:
+
+![Type Coercion Example](./docs/type_coercion_1.png)
+
+In the above example a is of type number and b is of type string. Javascript has coerced a to a string and performed a concatenation operation when a + b was executed and returned a value of type string. Javascript can coerce primitive (number, string, boolean, null, undefined and symbol) or objects automatically. 
+
+If the expected data type of the result of the operation a + b is a number, then an explicit data conversion is needed.
+
+![Type Conversion](/Users/pramods/term4/PramodSreekumaran_T4A1/docs/type_coercion_2.png)
+
+In the above example, a function Number is called to explicitly convert string data type to a Number.
+
+![Type coercion boolean](./docs/type_coercion_3.png)
+
+In the above example, there is a difference between == operator and === operator. The == operator does an automatic or implicit type conversion and that is the reason a boolean value and number value are equal. The === operator does not do an implicit type coercion. 
+
+Please refer to page https://dorey.github.io/JavaScript-Equality-Table/unified/ by Dorey (GitHub name), who has put together all the false positives that can result from == operator because of type coercion. This is the main issue with Javascript type coercion. Though type coercion helps to write less code, it is always better to write explicit type conversion in code to avoid any defects.  
 
 Q9 - Explain data types, using examples from the JavaScript programming language
 
@@ -50,17 +70,17 @@ Q11 - Explain how objects can be manipulated in JavaScript, using examples from 
 
 Q12 - Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language
 
+**Answer:** 
+
 Q13 - For the code snippet provided below, write comments for each line of code to explain its functionality. In your comments you must demonstrates your ability to recognise and identify functions, ranges and classes
 
-###### Q13 Code Snippet with comments
-
-
+###### Answer: Code Snippet with comments
 
 JSDoc tags were used to comment the code snippet. 
 
 The generated javascripts in html can be found in the below <a href="./docs/out">here</a>.
 
-
+Reference: https://www.npmjs.com/package/jsdoc
 
 ```javascript
 /**
