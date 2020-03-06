@@ -58,7 +58,7 @@ Q13 - For the code snippet provided below, write comments for each line of code 
 
 JSDoc tags were used to comment the code snippet. 
 
-The generated javascripts in html can be found in the below <a href="./docs/out/index.html">here</a>.
+The generated javascripts in html can be found in the below <a href="./docs/out">here</a>.
 
 
 
