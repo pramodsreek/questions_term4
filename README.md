@@ -66,9 +66,225 @@ Q9 - Explain data types, using examples from the JavaScript programming language
 
 Q10 - Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language
 
-Q11 - Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
+Answer:
 
-Q12 - Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language
+Unlike other languages, Arrays are a single variable in JavaScript that can store multiple items. 
+
+
+
+
+
+**Q11 - Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language**
+
+**Answer:**
+
+In JavaScript, Objects are key value pairs, where values can be primitive data types, Objects and functions. The important property to notice is \__proto__. Every Object in JavaScript has a link (\__proto__) to prototype and prototype has a prototype of its own. This is the mechanism used for object inheritance in JavaScript. It is called Prototypical/Prototype inheritance.  
+
+Prototypes are important part of object manipulation. 
+
+The below code is a simple object literal with key values and one of the values is a function. 
+
+```javascript
+//object literal
+const lion = {
+    type: "Carnivore",
+    home: "Africa",
+    whoAmI: function() {
+        return `I am a ${this.type} from ${this.home}`;
+    }
+};
+
+console.log(lion.whoAmI());
+console.log(Object.keys(lion));
+console.log(Object.values(lion));
+
+/**
+ * ====================
+ * output 
+ * ====================
+ * I am a Carnivore from Africa
+ * [ 'type', 'home', 'whoAmI' ]
+ * [ 'Carnivore', 'Africa', [Function: whoAmI] ]
+ */
+
+
+```
+
+To manipulate the above object, we can simply assign values using the keys in the object. There are two ways of assigning values using keys as shown below. This only changes the lion object. 
+
+```javascript
+lion.type = "Herbivore";
+lion["home"] = "South Africa";
+console.log(`Changed Lion: ${lion.type} ${lion.home}`);
+console.log(lion.whoAmI());
+
+/**
+ * -----------
+ * Output
+ * -----------
+ * Changed Lion: Herbivore South Africa
+ * I am a Herbivore from South Africa
+ */
+```
+
+Using object literal is not really efficient, as we have to repeat the properties in every object of the same type that have common properties. . 
+
+A more efficient way to do this would be to define a constructor that can be used as prototype for all objects. The example below defines a Animal prototype and creating two objects from the prototype. 
+
+```javascript
+// Constructor before and after ES5, ES6 uses classes but under the hood it still works the same way
+function Animal(type, home){
+    this.type = type;
+    this.home = home;
+    this.myProfile = function() {
+        return `I am a ${this.type} from ${this.home}`;
+    }
+}
+
+//instantiating object
+const tiger = new Animal("Carnivore","India");
+const zebra = new Animal("Herbivore", "Africa");
+
+console.log(zebra);
+
+/**
+ * ===================
+ * Output
+ * ===================
+ * Animal { type: 'Herbivore', home: 'Africa', myProfile: [Function] }
+ */
+
+
+```
+
+The above objects were created from Prototype Animal, but if there is a requirement to add new properties to all objects created, then the best way to do it is add this property to the prototype. In the example below, the object was manipulated to include a new property bloodType. 
+
+```javascript
+Animal.prototype.whoAmI = function() {
+    return `I am a ${this.type} from ${this.home}`;
+};
+
+Animal.prototype.addBloodType = function(bloodType) {
+    this.bloodType = bloodType;
+};
+
+zebra.addBloodType("Warm");
+
+console.log(zebra);
+console.log(zebra.whoAmI());
+
+/**
+ * ==================
+ * Output
+ * ==================
+ * Animal {
+ * type: 'Herbivore',
+ * home: 'Africa',
+ * myProfile: [Function],
+ * bloodType: 'Warm'
+ * }
+ * I am a Herbivore from Africa
+ 
+ */
+
+
+```
+
+The other way adding more properties to an object is inheritance. Inheritance has the additional capability of overriding the constructor. This will allow adding additional properties at the time of creation. 
+
+```javascript
+//Inheriting Animals in LandAnimal
+function LandAnimal(type, home, temperature){
+    Animal.call(this, type, home);
+    this.temperature = temperature;
+}
+
+//inherit prototype
+//creates a new object with existing object as prototype
+LandAnimal.prototype = Object.create(Animal.prototype);
+
+//Use the LandAnimal constructor
+LandAnimal.prototype.constructor = LandAnimal;
+
+//instantiation
+const bear = new LandAnimal("Carnivore","Canada",5);
+
+
+console.log("Profile: " + bear.myProfile());
+console.log("Who am I: " + bear.whoAmI());
+
+/**
+ * =============
+ * Output
+ * ==============
+ * Profile: I am a Carnivore from Canada
+ * Who am I: I am a Carnivore from Canada
+ */
+
+
+```
+
+The syntax used above is ES5. Though ES6 uses classes, it still works in the same way as ES5 under the hood. This explains why objects are functions under the hood.
+
+The below example shows a ES6 class.
+
+```javascript
+//ES6 - Syntactic sugar - same as ES5
+class SeaBeing {
+    constructor(name, type){
+        this.name = name;
+        this.type = type;
+    }
+    whoAmI() {
+        return `I am a ${this.name} from ${this.type}`;
+    }
+    static aboutMe(){
+        return 'Iam a sea being';
+    }
+}
+
+//Instantiate Object
+const whale = new SeaBeing('Big', 'Mammal');
+console.log(whale);
+
+/**
+ * ===========
+ * Output
+ * ===========
+ * SeaBeing { name: 'Big', type: 'Mammal' }
+ */
+
+
+```
+
+As shown in the JavaScript code below, ES6 makes the constructor override easier by using super.
+
+```javascript
+//subclass (inheritance)
+class Fish extends SeaBeing {
+    constructor(name, type, size){
+        super(name, type);
+        this.size = size;
+    }
+}
+
+//Instantiate
+const shark = new Fish('Bull', 'Not a Mammal', 'Large');
+console.log(shark.whoAmI());
+
+/**
+ * =============
+ * Output
+ * =============
+ * I am a Bull from Not a Mammal
+ */
+```
+
+JavaScript provides powerful objects framework with several to manipulate them individually using keys and values or by changing the prototypes to manipulate all instances or using inheritance to apply it to newly created objects. 
+
+
+
+**Q12 - Explain how JSON can be manipulated in JavaScript, using examples from the JavaScript programming language**
 
 **Answer:** 
 
@@ -109,6 +325,8 @@ console.log(cityObj.postcode);
 
 
 ```
+
+
 
 
 
