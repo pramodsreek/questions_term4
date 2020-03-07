@@ -4,7 +4,22 @@
 
 Q1 - Provide an overview and description of a standard source control process for a large project
 
-Q2 - What are the most important aspects of quality software?
+**Q2 - What are the most important aspects of quality software?**
+
+**Answer:** 
+
+The following are the most important aspects of a quality software.
+
+1. The software should pass a security code scan. This will ensure that it is free from vulnerabilities.
+2. Performance of software is very important. The execution should not be slow, as this can lead to exhaustion of resources and crashing of the application.
+3. The software should be fit for purpose. If the software is a custom build application for organisation, then it should meet all requirements. 
+4. The software should not produce any unexpected outcomes. It mostly happens when the code build for a totally unrelated industry is modified to fit for another purpose. For example, modifying a telco software and using it in banking.
+5. The modern software should be test driven. This is not just a requirement due to CI/CD popularity, but also to avoid changes that will break existing functionality. 
+6. The software should use good design patterns. For example if there are parameters to be loaded from a file that does not change often, then a Singleton pattern is more appropriate, so that there is no constant loading of the files.
+7. The code should be well documented using the standards, the code should be modular or at the basic level, the code should be easy to understand. 
+8. A good directory structure should be used to avoid any confusion. Most programming languages use packages, and bad directory structure is confusing and prone to defects.  
+9. All the changes should be managed in a good project management tool like Jira, which helps to link sprints, to requirements and code. Changes should be traceable. Though this is not direcly linked to quality, it helps to develop quality software.
+10. Similar to Point 9, there should be a good source control process in place to avoid any bad code in software. 
 
 **Q3 - Outline a standard high level structure for a MERN stack application and explain the components**
 
