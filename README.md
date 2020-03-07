@@ -62,9 +62,104 @@ In the above example, there is a difference between == operator and === operator
 
 Please refer to page https://dorey.github.io/JavaScript-Equality-Table/unified/ by Dorey (GitHub name), who has put together all the false positives that can result from == operator because of type coercion. This is the main issue with Javascript type coercion. Though type coercion helps to write less code, it is always better to write explicit type conversion in code to avoid any defects.  
 
-Q9 - Explain data types, using examples from the JavaScript programming language
+**Q9 - Explain data types, using examples from the JavaScript programming language**
 
+**Answer:**
 
+There are six main primitive data types in JavaScript. There is another primitive data type called BigInt supported by some browsers. There is one complex data type called object in JavaScript that can have other primitive data types or objects .
+
+The following are the basic data types in JavaScript - 
+
+1. number - Used for numbers of any type (Primitive) A number can represent integers and floating point numbers. All mathematical operations like add(+), subtract(-), multiply(*), division(/) etc are possible using number data type. JavaScript can store Infinity as shown in the code below. If there is an error while trying to divide String by Number, then it is represented by NaN.
+
+   ```javascript
+   c = 3.14;
+   console.log(typeof c); //number
+   
+   a = 1/0;
+   console.log(a); // Infinity
+   
+   b = "Test"/1;
+   console.log(b); // NaN
+   ```
+
+2. string - Used for one or more characters  (Primitive). Strings have quotes around them. In JavaScript, double quotes, single quotes and back ticks can be used. Back ticks allows to use variables and expressions in strings.
+
+   ```javascript
+   a = "Hello";
+   b = 'Hi';
+   c = `The ways to greet ${2 + 4} people is ${a}, ${b}.`
+   console.log(c); //The ways to greet 6 people is Hello, Hi.
+   ```
+
+3. boolean - Used for true/false  (Primitive) Boolean is used to store correct/incorrect or yes/no values.
+
+   ```javascript
+   yes = 6 > 3;
+   console.log(yes); //true
+   no = 9 > 18;
+   console.log(no); //false
+   ```
+
+4. null - Used for unknown values  (Primitive) In JavaScript null does not represent Null Pointer like other languages. 
+
+   ```javascript
+   r = null;
+   console.log(r); //null
+   ```
+
+5. undefined - Used when values are not assigned to variable  (Primitive) It is a type of its own.
+
+   ```javascript
+   let r;
+   console.log(r); //undefined
+   console.log(typeof r); //undefined
+   ```
+
+6. object - Used for complex data structures (Complex) Objects are used to store collection of entities. They have properties which is a key value pairs. The keys are strings and values can be simple or complex types. Objects can be manipulated. 
+
+   ```javascript
+   person = {
+       name: "Parrot",
+       location: "Zoo",
+       country: "Zooland"
+   };
+   
+   console.log(person); //{ name: 'Parrot', location: 'Zoo', country: 'Zooland' }
+   console.log(person.name); //Parrot
+   
+   //change value of property
+   person["name"] = "Zebra";
+   
+   //delete a property
+   delete person.location;
+   console.log(person);
+   ```
+
+7. symbol - Used for unique identifiers (Primitive)  Symbols can be used to assign unique identifiers to properties of object. When multiple objects are created like the one below, unique values can be assigned using Symbol.
+
+   ```javascript
+   id = Symbol("id");
+   id1 = Symbol("id");
+   
+   bool_sym = id === id1; //their descriptions are same but they are unique.
+   
+   console.log(id);//Symbol(id)
+   console.log(id1);//Symbol(id)
+   
+   console.log(bool_sym);
+   
+   person = {
+       name: id,  //Symbol used
+       location: "Zoo",
+       country: "Zooland",
+   };
+   
+   console.log(person); //{ name: Symbol(id), location: 'Zoo', country: 'Zooland' }
+   console.log(person.name); //Symbol(id)
+   ```
+
+   
 
 **Q10 - Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language**
 
