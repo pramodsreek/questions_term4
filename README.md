@@ -67,13 +67,17 @@ The following knowledge and skills are required to develop a website for a small
 4. All developers should have a good understanding of the source control process and follow it.
 5. Finally the developers and others should have knowledge and skills required to build code on platform using the agreed programming language. If the skills are missing, then there should be time in schedule allocated for training. It is important for Architects, Designers, Technical Analysts and other non admin staff involved in the project to understand technologies used in order to understand the limitations and advantages and design solutions with limitations and advantages in mind. 
 
-Q5 - With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
+**Q5 - With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges**
 
-Answer:
+**Answer:**
 
-I worked on a project for developing a billing solution for a client. The following knowledge and skills was required to complete the project and overcome challenges.
+I worked on a project for developing a billing solution for a client. I was a technical analyst, so the knowledge and skills required are slightly different to developer.  The following knowledge and skills was required to complete the project and overcome challenges.
 
-1. 
+1. Understanding the Architecture and requirement to develop solution design for sub system.
+2. Getting the tools required to draw designs like workflow designs and learning to use them.
+3. Understanding the version control system to add these designs and documentation to version control system.
+4. Understanding the technologies and system, to access database and other servers to workout required configuration to support testing teams.
+5. Using confluence and jira to assign work to offshore developers and provide requirements and other information for their unit of work.  
 
 **Q6 - With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature**
 
