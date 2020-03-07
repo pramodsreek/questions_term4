@@ -69,11 +69,19 @@ The following knowledge and skills are required to develop a website for a small
 
 Q5 - With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
 
-Q6 - With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
-
 Answer:
 
+I worked on a project for developing a billing solution for a client. The following knowledge and skills was required to complete the project and overcome challenges.
 
+1. 
+
+**Q6 - With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature**
+
+**Answer:**
+
+I worked on a project for developing a billing solution for a client as mentioned in Question 5. My knowledge of the requirements was very good. But my understanding of the underlying technology used in the project was not very good. I was a technical analyst on the project. Though working on the code was not part of my responsibilities, I believe it would have helped to speed things up while working and supporting the testers. It would have helped me to understand the blocks of code that was causing the issue and point developers to the block of code that is causing the issue. This could be good or bad thing to do, i.e. interfering in the work of developers. Sometimes, understanding the code also helps in getting the configuration right for improving the performance during performance testing of the system. If there are dependencies on other team members, it delays the whole process. 
+
+The changes I am doing to improving my skills is learning to code again in all the recent software and technologies. I believe this will help me be less dependent on development teams to understand code and improve resolution times of defects and configuration changes.   
 
 **Q7 - Explain control flow, using an example from the JavaScript programming language**
 
