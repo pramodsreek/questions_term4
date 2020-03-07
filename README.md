@@ -2,7 +2,21 @@
 
 ## Questions and Answers
 
-Q1 - Provide an overview and description of a standard source control process for a large project
+**Q1 - Provide an overview and description of a standard source control process for a large project**
+
+**Answer:**
+
+A standard source control process will include a very good version control system. Git is a highly recommended version control system to use for a large project.
+
+Very large projects in the banking and telcommunications industry have development teams spread all over the world. If a project has development teams in Sydney, Singapore, London and New York working on different modules of an application, then it will be better to have four feature branches from a Mono Repo. That is a large single repository for all code including frontend/ backend with four feature branches created from the main development branch.
+
+All the feature branches will not be merged to the main development branch all at once, because of the schedules of different feature delivery. This mandates the update of the feature branches when the main development branch is modified due to release by one of the teams. Tags can be used when this happens, so that the other teams can merge the latest changes from the development branch to their feature branch. This is important to resolve any merge conflicts and any related functionality changes early to resolve. Some of these changes may require working with other teams and non development teams. 
+
+If Continous Integration (CI) is in place to push the changes in development branch to a preproduction test environment for automation testing, then it is better to preproduction branch. The code in preproduction branch will be picked up by the hourly or nightly builds and tested on preproduction or another test environment. 
+
+All the top of these there would be a release branch which is code pushed from preproduction branch and is ready to be deployed to production. 
+
+All local repositories on developers machine should be updated (pull) frequently from the appropriate branch to avoid spending too much time towards the end of a development sprint in resolving merge conflicts.
 
 **Q2 - What are the most important aspects of quality software?**
 
