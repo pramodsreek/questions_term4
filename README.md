@@ -134,7 +134,7 @@ In the above example a is of type number and b is of type string. Javascript has
 
 If the expected data type of the result of the operation a + b is a number, then an explicit data conversion is needed.
 
-![Type Conversion](/Users/pramods/term4/PramodSreekumaran_T4A1/docs/type_coercion_2.png)
+![Type Conversion](./docs/type_coercion_2.png)
 
 In the above example, a function Number is called to explicitly convert string data type to a Number.
 
