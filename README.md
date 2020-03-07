@@ -64,13 +64,104 @@ Please refer to page https://dorey.github.io/JavaScript-Equality-Table/unified/ 
 
 Q9 - Explain data types, using examples from the JavaScript programming language
 
-Q10 - Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language
 
-Answer:
+
+**Q10 - Explain how arrays can be manipulated in JavaScript, using examples from the JavaScript programming language**
+
+**Answer:**
 
 Unlike other languages, Arrays are a single variable in JavaScript that can store multiple items. 
 
+JavaScript provides the following functions to manipulate arrays. They are very easy to use. 
 
+toString(), join(), concat(), push(), pop(), shift(), unshift(), splice(), slice(), split(), indexOf(), lastIndexOf(), filter(), map(), reduce(), forEach(), every(), some(), includes()
+
+Map, Reduce, Filter and ForEach are very useful methods to manipulate data with very little code. 
+
+```javascript
+let myArray = ['Sydney', 11, true];
+
+//toString() - converts array to comma separated string.
+console.log(myArray.toString()); // Sydney,11,true
+
+//join() - converts array to string with a separator.
+console.log(myArray.join('-')); //Sydney-11-true
+
+//concat() - merges two arrays together
+let myArray2 = [1,2,3];
+console.log(myArray.concat(myArray2)); //[ 'Sydney', 11, true, 1, 2, 3 ]
+
+//push() - Adds items to end of the array and modifies the array.
+myArray2.push('A','B','C');
+console.log(myArray2); //[ 1, 2, 3, 'A', 'B', 'C' ]
+
+//pop() - Removes the last item of the array
+myArray2.pop();
+console.log(myArray2);//[ 1, 2, 3, 'A', 'B' ]
+
+//shift() - Removes the first item of the array
+myArray2.shift();
+console.log(myArray2);//[ 2, 3, 'A', 'B' ]
+
+//unshift() - Adds an item to the beginning of the array
+myArray2.unshift(1);
+console.log(myArray2);//[ 1, 2, 3, 'A', 'B' ]
+
+//splice() - Changes an array by removing and adding elements.
+myArray2.splice(0,3,4,5,6);
+console.log(myArray2);//[ 4, 5, 6, 'A', 'B' ]
+
+//slice() - Returns a subarray of array. The original array is not modified.
+console.log(myArray2.slice(0,3));//[ 4, 5, 6 ]
+
+//split() - Splits a string and returns an array
+console.log("Coder".split(''));//[ 'C', 'o', 'd', 'e', 'r' ]
+
+//indexOf() - Returns the index of an item in array, if not found returns -1.
+console.log(myArray2.indexOf('A')); //3
+
+//lastIndexOf() - Returns the last index of item (it is possible to have duplicate items in array).
+myArray3 = [1,2,3,100,12,100];
+console.log(myArray3.lastIndexOf(100)); //5
+
+//filter() - Returns an array if a condition passes on items of array.
+console.log(myArray3.filter(num => num === 12));//[ 12 ]
+
+//map() - Used to manipulate the existing array
+console.log(myArray3.map(num => {return '$' + num;}));
+
+//reduce() - Calculates the total
+const sum = myArray3.reduce((total, value) =>
+total + value, 0);
+console.log(sum);
+
+//forEach() - Used to iterate the array items.
+myArray3.forEach((item, i) => console.log(i, item));
+//Output
+//0 1
+//1 2
+//2 3
+//3 100
+//4 12
+//5 100
+
+//every() - Checks if all items satisfies a condition.
+console.log(myArray3.every((value) => {
+    return value >= 90;
+    })); //false
+
+//some() - Checks if some items satisfies a condition.
+console.log(myArray3.some((value) => {
+    return value >= 90;
+    })); //true
+
+//includes() - Checks if an array contains a specific item.
+console.log(myArray3.includes(12)); //true
+
+
+```
+
+The above code are examples of using array manipulation script in JavaScript. 
 
 
 
