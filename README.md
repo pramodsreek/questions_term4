@@ -55,11 +55,25 @@ The web application is divided into frontend and backend. Frontend and Backend a
 
 **Node** is a JavaScript runtime platform to easily build fast and scalable applications. It is very good for processing large volumes of data in real time. It works very well with the other components of the MERN stack.
 
-Q4 - A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+**Q4 - A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?**
+
+**Answer:**
+
+The following knowledge and skills are required to develop a website for a small business.
+
+1. Every member of the team should understand the statement of work. Statement of work is a subset of contract that will list all the components that are developed, the standards required by the team and the supporting document that should be delivered to the client. The supporting documentation would be architecture diagram, database design, and test plan. This helps the clients to review the costs and other concerns related to data.
+2. All developers should have a good understanding of the requirements, modules, assigned work and schedule. They should also have the coding standards to be used, like variable naming, code comment requirement, module requirement etc. Understanding the requirement is important to avoid getting distracted and developing something that will not be paid for by the client, as it is not fit for purpose.
+3. All developers should have the unit test requirements for their code. 
+4. All developers should have a good understanding of the source control process and follow it.
+5. Finally the developers and others should have knowledge and skills required to build code on platform using the agreed programming language. If the skills are missing, then there should be time in schedule allocated for training. It is important for Architects, Designers, Technical Analysts and other non admin staff involved in the project to understand technologies used in order to understand the limitations and advantages and design solutions with limitations and advantages in mind. 
 
 Q5 - With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
 
 Q6 - With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
+
+Answer:
+
+
 
 **Q7 - Explain control flow, using an example from the JavaScript programming language**
 
