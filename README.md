@@ -6,31 +6,25 @@ Q1 - Provide an overview and description of a standard source control process fo
 
 Q2 - What are the most important aspects of quality software?
 
-Q3 - Outline a standard high level structure for a MERN stack application and explain the components
+**Q3 - Outline a standard high level structure for a MERN stack application and explain the components**
 
-MERN stack is a JavaScript stack built using MongoDB, Express, React and Node. The combination of these technologies provide a framework that makes the development process easier.
+**Answer:**
 
-The web application is divided into frontend and backend. Frontend and Backend are separate and should have its own package.json.
+MERN stack is a JavaScript stack built using MongoDB, Express, React and Node. The combination of these technologies provide a framework that makes the development process easier. Developers who work on all components of a MERN stack are called full stack developers.
+
+The web application is divided into frontend and backend. Frontend and Backend are separate and should have its own package.json. In git, it is better to use Mono Repos though frontend and backend are deployed separately. 
 
 **Frontend Components**
 
-React is a powerful javascript framework to build interactive user interfaces. React is useful for single page and mobile applications with frequently changing data and it updates and renders only the components where data has changed. 
-
-The components of React (javascript library) are :
-
-Virtual DOM - VDOM is a programming 
-
-
-
-
+**React** is a powerful javascript framework to build interactive user interfaces. It can manage the events and states very well. React is useful for single page applications and mobile applications with frequently changing data and it updates and renders only the components where data has changed. React uses Virtual DOM which is a copy of the DOM, to work out the components to be rendered.
 
 **Backend Components**
 
-MongoDB
+**MongoDB** is a NOSQL or a Document database used for storing data as objects. MongoDB is scalable and flexible. It is the most popular no-sql database and works very well with Node. MongoDB works very well with Mongoose which is a Object Data Modelling library which manages relationship between the objects in the code and the objects in database. It also does schema validation.
 
-Express
+**Express** is a flexible scalable Node web application framework. The API's(web) are developed using this Express. React front end calls the API's to process all types of HTTP requests. Express framework makes the development of API's easy by providing the components.
 
-React
+**Node** is a JavaScript runtime platform to easily build fast and scalable applications. It is very good for processing large volumes of data in real time. It works very well with the other components of the MERN stack.
 
 Q4 - A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
