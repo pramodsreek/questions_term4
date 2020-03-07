@@ -38,7 +38,89 @@ Q5 - With reference to one of your own projects, discuss what knowledge or skill
 
 Q6 - With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
 
-Q7 - Explain control flow, using an example from the JavaScript programming language
+**Q7 - Explain control flow, using an example from the JavaScript programming language**
+
+**Answer:**
+
+Control flow is the order in which the statement or functions are executed. JavaScript provides control flow statements to control the execution of blocks of code. 
+
+**Conditional Statement**
+
+If..then..else, for, while and switch are conditional statements provided by JavaScript. Depending on the condition being true or false, a block of code is executed. If there are special cases where a for or while loop has to terminated, then a break statement can be used. Similarly a continue statement can be used, if there is something additional to be executed and then the loop has to be continued. A switch statement can compare a value to multiple cases and execute the required statements. 
+
+The code below has examples of conditional statements. 
+
+```javascript
+let a  = 1;
+let b = 3;
+if (a < b){
+    for (let i=0; i< 10; i++){
+        console.log(i);
+        if(i == 5){
+            console.log("i is 5, so breaking");
+            break;
+        } 
+    }
+}
+
+let c = 5;
+let k = 0;
+if (c > a){
+    while (k < 5){
+        console.log(k);
+        if (k == 3){
+            console.log("Woohoo!");
+            k += 2;
+            continue; //it will not execute k++;
+        }
+        k++;
+    }
+}
+
+let market = 'Coles';
+switch (market) {
+    case 'Coles':
+        console.log('Coles');
+        break;
+    case 'Woolwoths':
+        console.log('Woolwoths');
+        break;
+    case 'Aldi':
+        console.log('Aldi');
+        break;
+    default:
+        console.log(`we have not heard of this market ${market}.`);
+}
+
+
+
+```
+
+**Exception Handling Statements**
+
+try, catch and finally are control flow statements. If there is an exception thrown in a block of code the next block of code executed is within the catch block. Finally block is always executed.
+
+The code below is a basic example of control flow using exception handling statements. 
+
+```javascript
+try {
+  throw "This is created exception!";
+} catch(e) {  
+  handleError(e); 
+} finally {
+  handleFinally(); 
+}
+
+function handleError(e){
+    console.log(e);
+}
+
+function handleFinally(){
+    console.log("In finally!");
+}
+```
+
+
 
 **Q8 - Explain type coercion, using examples from the JavaScript programming language**
 
