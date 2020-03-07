@@ -77,7 +77,8 @@ I worked on a project for developing a billing solution for a client. I was a te
 2. Getting the tools required to draw designs like workflow designs and learning to use them.
 3. Understanding the version control system to add these designs and documentation to version control system.
 4. Understanding the technologies and system, to access database and other servers to workout required configuration to support testing teams.
-5. Using confluence and jira to assign work to offshore developers and provide requirements and other information for their unit of work.  
+5. Using confluence and jira to assign work to offshore developers and provide requirements and other information for their unit of work.
+6. Understanding the external SOAP and REST API's to answer development questions and support testers to do integrations tests.  
 
 **Q6 - With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature**
 
